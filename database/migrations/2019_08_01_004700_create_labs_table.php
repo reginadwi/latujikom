@@ -15,9 +15,9 @@ class CreateLabsTable extends Migration
     {
         Schema::create('labs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('kd_lab');
+            $table->integer('kd_lab');
             $table->integer('no_RM');
-            $table->string('kd_tindakan');
+            $table->integer('kd_tindakan');
             $table->text('ket');
             $table->timestamps();
         });
