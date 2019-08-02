@@ -39,13 +39,16 @@
                     @else
 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Menu1') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Role Super Admin') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Menu2') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Role Admin') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Menu3') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Role User') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Global Role ') }}</a>
                             </li>
                     @endguest
                     </ul>
