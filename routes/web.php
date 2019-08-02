@@ -14,7 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,5 +23,7 @@ function(){
     route::get('/admin',function(){
         return view ('admin.index');
     });
+    Route::resource('/Pasien','PasienController'); 
+
 });
 
