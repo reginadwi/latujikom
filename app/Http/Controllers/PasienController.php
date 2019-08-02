@@ -13,7 +13,8 @@ class PasienController extends Controller
      */
     public function index()
     {
-        //
+        $pasien = Pasien::orderBy('created_at','desc')->with('dokter')->get();
+        return view('backend.pasien.index', compact('pasien'));
     }
 
     /**

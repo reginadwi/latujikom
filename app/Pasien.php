@@ -15,12 +15,6 @@ public $timestamps = true;
             return $this->hasMany('App\Pasien','nm_pasien');
 
         }
-
-        public function Dokter()
-        {
-            return $this->belongsTo('App\Dokter','kd_dokter');
-
-        }
        
         public function Kunjungan()
         {
