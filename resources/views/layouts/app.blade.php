@@ -37,6 +37,7 @@
                     @guest
 
                     @else
+                    @role('admin')
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Role Super Admin') }}</a>
@@ -50,6 +51,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Global Role ') }}</a>
                             </li>
+                            @endrole
                     @endguest
                     </ul>
 

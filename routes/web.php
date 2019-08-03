@@ -15,15 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix'=>'/','middleware'=>['auth']],
+//admin route
+Route::group(['prefix'=>'admin','middleware'=>['auth','role:admin']],
 function(){
-    route::get('/admin',function(){
+    route::get('/',function(){
         return view ('admin.index');
     });
-    Route::resource('/Pasien','PasienController'); 
+   // Route::resource('/Pasien','PasienController'); 
 
 });
 
